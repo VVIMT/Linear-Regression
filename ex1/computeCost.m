@@ -13,15 +13,16 @@ J = 0;
 % Instructions: Compute the cost of a particular choice of theta
 %               You should set J to the cost.
 
-i = 0
-while i < m,
-	tmp = tmp + y[i];
-	i = i+1;
+prediction = 0.0;
+i = 0;
+while (i < m),
+	int j = 0;
+	while (j < 2),
+		prediction = prediction + theta[j] * x[i] - y[i];
+		j++;
+	TMP = TMP + power(prediction, 2);
+	i++;
 
-J = 1/(2*m) * power(theta'*X - tmp, 2)
-
-
-
-% =========================================================================
+J = 1/(2*m) * TMP;
 
 end
