@@ -14,15 +14,13 @@ J = 0;
 %               You should set J to the cost.
 
 prediction = 0.0;
-i = 0;
-while (i < m),
-	int j = 0;
-	while (j < 2),
-		prediction = prediction + theta[j] * x[i] - y[i];
-		j++;
-	TMP = TMP + power(prediction, 2);
-	i++;
+i = 1;
 
-J = 1/(2*m) * TMP;
+while (i <= m)
+	prediction = prediction + power(theta' * X(i, :)' - y(i), 2);
+	i++;
+end;
+
+J = 1/(2*m) * prediction;
 
 end
