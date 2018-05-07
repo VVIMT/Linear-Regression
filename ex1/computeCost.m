@@ -19,7 +19,7 @@ i = 1;
 while (i <= m)
 	prediction = prediction + power(theta' * X(i, :)' - y(i), 2);
 	i++;
-end;
+end
 
 J = 1/(2*m) * prediction;
 
