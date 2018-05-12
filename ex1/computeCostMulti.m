@@ -13,9 +13,15 @@ J = 0;
 % Instructions: Compute the cost of a particular choice of theta
 %               You should set J to the cost.
 
+prediction = 0.0;
+i = 1;
 
+while (i <= m)
+	prediction = prediction + power(theta' * X(i, :)' - y(i), 2);
+	i++;
+end
 
-
+J = 1/(2*m) * prediction;
 
 % =========================================================================
 

@@ -29,7 +29,7 @@ sigma = zeros(1, size(X, 2));
 
 for i = 1 : size(X, 2)
 	mu(i) = mean(X(:, i));
-	sigma(i) = max(X(: , i)) - min(X(: , i));
+	sigma(i) = std(X(:, i));
 end
 
 for i = 1 : size(X, 1)
